@@ -1,0 +1,315 @@
+<!--
+    Adrián González Saldívar
+    03-04-2022
+-->
+
+<!Doctype html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" >
+        <link rel="stylesheet" href="CSS/style.css">
+        
+        
+        <script type = "text/javascript" src="JS/app.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+        <title>Library</title>
+    </head>
+    <body class="p-3 mb-2 bg-danger text-light">
+        <main>
+            <h1>Book Community</h1>
+            <div class="menu">
+                <nav class="nav">
+                        <a class="nav-link active" href="#reviews" >Reviews</a>
+                        <a class="nav-link active" href="#library">Library/Wishlist</a>
+                        <a class="nav-link active" href="#recientes">New Releases</a>
+                </nav>
+            </div>  <!--Diferencia de div y section?-->
+        </main>
+
+        <br>
+            
+            <!-- Para futuras veriones, agregar metodo para que se guarden los reviews-->
+            <div id="reviews">
+                <h2>Reviews</h2>
+                <form>
+                    <button type="button" class="btn btn-dark" data-toggle="collapse"  data-target="#collapseReview" aria-expanded="false" aria-controls="collapseReview">Give Review</button>
+                    <br><br>
+                    <div class="collapse" id="collapseReview">
+                        <div class="input-group m-1">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">Title</span>
+                                <label for="title"></label>
+                                <input type="text"  name="Title" id="title" required>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="input-group m-1">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">Author</span>
+                                <label for="writer"></label>
+                                <input type="text" name="Author" id="writer" required>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <label for="descrip"></label>
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Review</span>
+                            </div>
+                            <textarea class="form-control" id="descrip" name="descrip" rows="4" cols="50" required></textarea>
+                        </div>
+                        
+                        <br><br>
+                        <input type="submit" class="btn btn-dark" value="Submit">
+                        <br>
+                        <h6>Se implementara esta en futuras verisones</h6>
+                        
+                    </div>
+                </form>
+
+                <div class="published-Review">
+                    <div class="data"> 
+                        <h2>A Game of Thrones</h2>
+                        <h3>George R. R. Martin</h3>
+                    </div>
+                    <div class="descrip-box">
+                        <p>An absoloutely brilliant novel. In my opinion, 
+                            A Game of Thrones is one of the greatest fantasy novels ever written by 
+                            one of the best authors ever</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+
+            <div id="recientes">
+                <h2>Recent Release</h2>
+                    <!--
+                    <div class="release">
+                        <a target="_blank" href="Images/Acourtofsilverflames.jpg">
+                            <img src="Images/Acourtofsilverflames.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc">A Court of Silver Flames, By Sarah J. Maas</div>
+                    </div>
+                    <div class="release">
+                        <a target="_blank" href="Images/Acourtofsilverflames.jpg">
+                            <img src="Images/Acourtofsilverflames.jpg" alt="" width="600" height="400">
+                        </a>
+                        <div class="desc">A Court of Silver Flames, By Sarah J. Maas</div>
+                    </div>
+                    -->
+                    
+                    <div class="card">
+                        <img class="card-img-top" src="Images/Acourtofsilverflames.jpg" alt="Cover A Court of Silver Flames">
+                        <div class="card-body">
+                          <h5 class="card-title">A Court of Silver Flames by Sarah J. Maas</h5>
+                          <p class="card-text">A Court of Silver Flames follows Nesta and Cassian as they deal with the blazing fire between them while they face their haunting pasts...</p>
+                          <a target="_blank" href="https://www.amazon.com.mx/Court-Silver-Flames-Sarah-Maas/dp/168119628X/ref=sr_1_1?crid=3PWW6F6SYHU66&keywords=a+court+of+silver+flames&qid=1648936384&sprefix=A+Court+%2Caps%2C184&sr=8-1" class="btn btn-primary">Buy</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="Images/TrialsofApolloTN.jpg" alt="Trials of Apollo Tower of Nero">
+                        <div class="card-body">
+                          <h5 class="card-title">Trials of Apollo Tower of Nero by Rick Riordan</h5>
+                          <p class="card-text">Lester's demigod friends at Camp Jupiter just helped him survive attacks from bloodthirsty ghouls, 
+                              an evil Roman king and his army of the undead...</p>
+                          <a target="_blank" href="https://www.amazon.com.mx/Tower-Nero-Trials-Apollo-Book/dp/1484746457/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=&sr=" class="btn btn-primary">Buy</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="Images/glided.jpg" alt="Glided">
+                        <div class="card-body">
+                          <h5 class="card-title">Glided by Marissa Meyer</h5>
+                          <p class="card-text">Long ago cursed by the god of lies, a poor miller's daughter has developed a talent for 
+                              spinning stories that are fantastical and spellbinding and entirely untrue. Or so everyone believes...</p>
+                          <a target="_blank" href="https://www.amazon.com.mx/Gilded-Marissa-Meyer/dp/1250618843/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=&sr=" class="btn btn-primary">Buy</a>
+                        </div>
+                    </div>  
+                    <div class="card">
+                        <img class="card-img-top" src="Images/timejumpers.jpg" alt="Time Jumpers">
+                        <div class="card-body">
+                          <h5 class="card-title">Time Jumpers by Brandon Mull</h5>
+                          <p class="card-text">Cole Randolph can barely remember what life was like back home in Arizona. 
+                              It's hard to imagine there was a time he didn't wake up to daily threats and danger...</p>
+                          <a target="_blank" href="https://www.amazon.com.mx/Time-Jumpers-Brandon-Mull/dp/1442497122/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=&sr=" class="btn btn-primary">Buy</a>
+                        </div>
+                    </div> 
+                    <div class="card">
+                        <img class="card-img-top" src="Images/queenofnothing.jpg" alt="Queen of Nothing">
+                        <div class="card-body">
+                          <h5 class="card-title">The Queen of Nothing by Holly Black</h5>
+                          <p class="card-text">He will be the destruction of the crown and the ruination of the throne
+                            Power is much easier to acquire than it is to hold onto Jude learned this lesson when she released her control over the wicked king, Cardan, in exchange for immeasurable power...</p>
+                          <a target="_blank" href="https://www.amazon.com.mx/Queen-Nothing-Holly-Black/dp/0316310425/ref=sr_1_1?keywords=queen+of+nothing&qid=1649020792&sprefix=Queen+of+no%2Caps%2C172&sr=8-1" class="btn btn-primary">Buy</a>
+                        </div>
+                    </div> 
+            </div>
+            
+            <!--Falta filtros; Puede ser un dropdown de diferentes generos, y el de autores se filtraria la tabla por orden alfabetico-->
+            <div  id="library"> 
+                <h2>Library & Wishlist</h2>
+                <!-- Agregar a futuras versiones, (utilizar local storage)-->
+                <form action="">
+                    <div class="input-group m-1">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Title or Author</span>
+                            <label for="title-author"></label>
+                            <input type="text" name="Title-or-Author" id="title-author" required>
+                        </div>
+                    </div>
+            
+
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="check">Library</label>
+                        <input class="form-check-input" type="checkbox"  name="Library" id="check" value="option1">
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="check">Wishlist</label>
+                        <input class="form-check-input" type="checkbox"  name="wishlist" id="check" value="option2">
+                    </div>
+
+                    <input type="submit" class="btn btn-dark" value="Add">
+                    <br>
+                    <h6>La funcion de agregar se implementara en futuras veriones.</h6>
+                    
+                </form>
+                
+                <!--Usando CSS Puro
+                <nav class="filtro">
+                    <h3>Table filter by Author or Genre</h3>
+
+                    <div class="btn-group dropup">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Author
+                        </button>
+                            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                              <a class="dropdown-item" href="#">Rick Riordan</a>
+                              <a class="dropdown-item" href="#">George R. R. Martin</a>
+                              <a class="dropdown-item" href="#">Sarah J. Maas</a>
+                              <a class="dropdown-item" href="#">J.K. Rowling</a>
+                            </div>
+                    </div>
+                    <div class="btn-group dropup"> 
+                        <button id="btnGroupDrop2" type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Genre
+                        </button>
+                            <div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
+                              <a class="dropdown-item" href="#">Action</a>
+                              <a class="dropdown-item" href="#">Fantasy</a>
+                              <a class="dropdown-item" href="#">Sci-Fi</a>
+                              <a class="dropdown-item" href="#">Romance</a>
+                              <a class="dropdown-item" href="#">Drama</a>
+                            </div>
+                    </div>
+                </nav>
+                -->
+                <br><br>
+
+                <!--Revisar acomodacion de tablas-->
+                <div class="tables">
+                    <table id="libreria" colspan="4">
+                    <thead>
+                            <th col-index = 1>Title
+                                <select class="table-filter lib" onchange="filter(event)">
+                                    <option value="all"></option>
+                                </select>
+                            </th>
+                            <th col-index = 2>Genre</th>
+                            <th col-index = 3>Author
+                                <select class="table-filter lib" onchange="filter(event)">
+                                    <option value="all"></option>
+                                </select>
+                            </th>
+                            <th col-index = 4>Image</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Percy Jackson & The Olympians: The Lightning Thief</td>
+                            <td id="genre">Fantasy Action Adventure</td>
+                            <td id="author">Rick Riordan</td>
+                            <td><img src="Images/PercyJacksonTheLightningThief.jpg" alt="Percy Jackson & The Olympians: The Lightning Thief" class="Responsive image"></td>
+                        </tr>
+                        <tr>
+                            <td>Renegades</td>
+                            <td id="genre">Fantasy Romance Drama Action</td>
+                            <td id="author">Marissa Meyer</td>
+                            <td><img src="Images/renegades.jpg" alt="Renegades" class="Responsive image"></td>
+                        </tr>
+                        <tr>
+                            <td>Arch-Enemies</td>
+                            <td id="genre">Fantasy Romance Drama Action</td>
+                            <td id="author">Marissa Meyer</td>
+                            <td><img src="Images/arch-enemies.jpg" alt="Arch-Enemies" class="Responsive image"></td>
+                        </tr>
+                    </tbody>
+                    </table>
+
+                    <table id="wish" colspan="4">
+                        <thead>
+                            <tr>
+                              <th col-index = 1>Title
+                                  <select class="table-filter wis" onchange="filter(event)">
+                                      <option value="all"></option>
+                                  </select>
+                              </th>
+                              <th col-index = 2>Genre</th>
+                              <th col-index = 3>Author
+                                  <select class="table-filter wis" onchange="filter(event)">
+                                      <option value="all"></option>
+                                  </select>
+                              </th>
+                              <th col-index = 4>Image</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>The Winds of Winter</td>
+                                <td id="genre">Fantasy Accion Adventure Drama History</td>
+                                <td id="author">George R.R. Martin</td>
+                                <td><img src="Images/TheWindsofWinter.jpg" alt=" The Winds of Winter" class="Responsive image"></td>
+                            </tr>
+                            <tr>
+                                <td>Marina</td>
+                                <td id="genre">Fantasy Suspense</td>
+                                <td id="author">Carlos Ruiz Zafon</td>
+                                <td><img src="Images/marina.jpg" alt="Marina" class="Responsive image"></td>
+                            </tr>
+                            <tr>
+                                <td>The song of Achilles</td>
+                                <td id="genre">Fantasy Romance History Drama</td>
+                                <td id="author">Madelline Miller</td>
+                                <td><img src="Images/AsongofAchilles.jpg" alt="A song of Achilles" class="Responsive image"></td>
+                            </tr>
+                            <tr>
+                                <td>SuperNova</td>
+                                <td id="genre">Fantasy Romance Action Drama</td>
+                                <td id="author">Marissa Meyer</td>
+                                <td><img src="Images/supernova.jpg" alt="SuperNova" class="Responsive image"></td>
+                            </tr>
+                            <tr>
+                                <td>The Trials of Apollo The Tyrant´s Tomb</td>
+                                <td id="genre">Fantasy Action Adventure</td>
+                                <td id="author">Rick Riordan</td>
+                                <td><img src="Images/tyrantstomb.jpg" alt="The Trials of Apollo The Tyrant´s Tomb" class="Responsive image"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <script type = "text/javascript">
+                        start()
+                    </script>
+                </div>
+                
+            </div>
+    </body>
+    <footer>
+        <p>By Adrian Gonzalez Saldivar. In 2022</p>
+    </footer>
+</html>
